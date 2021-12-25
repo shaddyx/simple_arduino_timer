@@ -1,8 +1,21 @@
 #pragma once
 #include <Arduino.h>
 
-class SmallTimer {
+class SimpleTimer {
     public:
+        SimpleTimer(){
+        }
+        
+        SimpleTimer(long ms){
+            set(ms);
+        }
+
+        SimpleTimer(long ms, bool immediately){
+            if (immediately){
+                set_immediately(ms);
+            }
+        }
+
         void set(long ms){
             start = millis();
             started = true;
@@ -18,6 +31,11 @@ class SmallTimer {
         
         void stop(){
             started = false;
+        }
+
+        void set_immediately(long ms){
+            set(ms);
+            this -> start = millis() - ms;
         }
 
         bool interval(){

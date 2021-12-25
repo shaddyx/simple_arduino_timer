@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "small_timer.h"
+#include "timerlib/simple_timer.h"
 
 void setup(){
 
