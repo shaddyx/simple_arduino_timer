@@ -33,6 +33,10 @@ class SimpleTimer {
             started = false;
         }
 
+        bool is_started(){
+            return started;
+        }
+
         void set_immediately(long ms){
             set(ms);
             this -> start = millis() - ms;
