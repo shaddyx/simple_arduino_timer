@@ -21,7 +21,7 @@ class SimpleTimer {
             started = true;
             this->ms = ms;
         }
-        int time_last(){
+        unsigned long time_last(){
             if (!started){
                 return 0;
             }
