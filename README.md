@@ -5,7 +5,7 @@ Usage (interval):
 
 #include "timerlib/simple_timer.h"
 
-SmallTimer updateTimer;
+SimpleTimer updateTimer;
 
 void setup(){
     updateTimer.set(10);    // blink every 10 ms
@@ -25,7 +25,7 @@ Usage (once):
 
 #include "timerlib/simple_timer.h"
 
-SmallTimer updateTimer;
+SimpleTimer updateTimer;
 
 void setup(){
     updateTimer.set(10);    // blink once in 10 ms
